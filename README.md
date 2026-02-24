@@ -1,61 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Medius - Full-Stack Medium Clone ✍️
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Alpine.js](https://img.shields.io/badge/Alpine.js-2D3441?style=for-the-badge&logo=alpine.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-## About Laravel
+Medius adalah aplikasi web platform *blogging* *full-stack* yang terinspirasi dari antarmuka dan pengalaman pengguna (UX) Medium. Proyek ini dibangun dengan arsitektur monolith menggunakan ekosistem Laravel modern untuk mendemonstrasikan kemampuan pengembangan backend yang solid dipadukan dengan interaktivitas frontend yang responsif.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> **Live Demo:** https://mangix.my.id/
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Fitur Utama
 
-## Learning Laravel
+Aplikasi ini tidak hanya mencakup operasi CRUD standar, tetapi juga fitur interaksi komunitas yang kompleks:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Pengalaman Menulis Modern (WYSIWYG):** Terintegrasi dengan **Trix Editor** untuk penulisan artikel bergaya *rich-text* yang bersih dan aman.
+* **Sistem Manajemen Gambar:** Menggunakan **Spatie Media Library** untuk menangani *upload* dan penyimpanan *cover* artikel secara efisien.
+* **Komentar Berantai (*Threaded Comments*):** Pengguna dapat mengomentari artikel dan saling membalas komentar. UI dibuat reaktif tanpa *reload* halaman menggunakan **Alpine.js**.
+* **Otorisasi Ketat:** Implementasi Laravel Policies untuk memastikan pengguna hanya dapat mengedit atau menghapus komentar/postingan milik mereka sendiri.
+* **Feed yang Dipersonalisasi:** Navigasi topik *horizontal-scrolling* dinamis. Pengguna dapat mem-follow/unfollow kategori, dan *feed* utama akan menyesuaikan dengan preferensi mereka.
+* **Sistem Bookmark (Daftar Bacaan):** Pengguna dapat menyimpan artikel favorit mereka untuk dibaca nanti dengan akses cepat melalui menu navigasi.
+* **Notifikasi Dalam Aplikasi (*In-App Notifications*):** Sistem notifikasi *real-time-like* dengan indikator lonceng ketika pengguna mendapatkan pengikut baru atau balasan komentar.
+* **Pencarian Cerdas:** Terintegrasi dengan **Laravel Scout** (Driver Database) untuk mencari artikel berdasarkan judul, mencari pengguna, atau memfilter artikel berdasarkan hashtag kategori (contoh: `#laravel`).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Teknologi yang Digunakan
 
-## Laravel Sponsors
+* **Backend:** Laravel 11 (PHP 8.2+)
+* **Frontend:** Blade Templates, Tailwind CSS, Alpine.js
+* **Database:** PostgreSQL (Production) / MySQL/SQLite (Local)
+* **Paket Utama:**
+  * `spatie/laravel-medialibrary` (Manajemen file)
+  * `laravel/scout` (Pencarian teks penuh)
+  * `laravel/breeze` (Otentikasi *starter kit*)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 📸 Tangkapan Layar (*Screenshots*)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+*(Ganti link gambar di bawah ini dengan screenshot aplikasi Anda yang sebenarnya)*
 
-## Contributing
+| Halaman Beranda & Feed | Halaman Detail & Komentar |
+| :---: | :---: |
+| <img src="link_gambar_homepage_anda_disini.jpg" width="400" alt="Homepage Screenshot"> | <img src="link_gambar_detail_anda_disini.jpg" width="400" alt="Detail Screenshot"> |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🚀 Panduan Instalasi (Lokal)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Jika Anda ingin menjalankan proyek ini di mesin lokal Anda, ikuti langkah-langkah berikut:
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**1. Clone repositori**
+```bash
+git clone [https://github.com/Solakhuddin/medius.git](https://github.com/Solakhuddin/medius.git)
+cd nama-repo-anda
+```
+##2. Instal dependensi PHP dan Node.js**
+```bash
+composer install
+npm install
+```
+##3. Siapkan file konfigurasi**
+Duplikat file .env.example menjadi .env.
+```bash
+cp .env.example .env
+```
+##4. Generate Application Key**
+```bash
+php artisan key:generate
+```
+##5. Konfigurasi Database**
+Buka file .env dan sesuaikan kredensial database Anda (misalnya menggunakan MySQL lokal):
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database_lokal_anda
+DB_USERNAME=root
+DB_PASSWORD=
+```
+##6. Jalankan Migrasi database**
+```bash
+php artisan migrate
+```
+##7. Buat Symlink untuk penyimpanan (Wajib untuk Spatie Media Library)**
+```bash
+php artisan storage:link
+```
+##8. Build aset frontend dan jalankan server lokal**
+Jalankan kedua perintah ini di terminal yang terpisah:
+```bash
+npm run dev
+```
+```bash
+php artisan serve
+```
