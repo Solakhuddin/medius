@@ -44,7 +44,7 @@ Aplikasi ini tidak hanya mencakup operasi CRUD standar, tetapi juga fitur intera
 
 | Halaman Beranda & Feed | Halaman Detail & Komentar |
 | :---: | :---: |
-| <img src="link_gambar_homepage_anda_disini.jpg" width="400" alt="Homepage Screenshot"> | <img src="link_gambar_detail_anda_disini.jpg" width="400" alt="Detail Screenshot"> |
+| <img src="./home.png" width="400" alt="Homepage Screenshot"> | 
 
 ---
 
